@@ -12,8 +12,15 @@ if (blocks.length == 0) {
   }
 }
 
+function save() {
+  console.dir(this.previousSibling);
+}
 
 
+
+document.querySelectorAll(".saveBtn").forEach(saveBtn => {
+  saveBtn.addEventListener('click', save);
+});
 
 
 
