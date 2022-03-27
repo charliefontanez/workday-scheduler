@@ -5,7 +5,7 @@ var currentTime = moment().hour();
 var btns = document.querySelectorAll(".saveBtn");
 var blocks = [];
 
-currentTime = 13;
+
 // if (blocks.length == 0) {
 //   for (let i = 1; i < 10; i++) {
 //     let x = document.getElementById("1" * i);
@@ -33,18 +33,18 @@ function onLoad() {
 
 function loadBlocks() {
   for (let i = 0; i < 9; i++) {
-    let y = document.getElementById((i + 9).toString());
-    blocks.push(y);
+    let timeBlock = document.getElementById((i + 9).toString());
+    blocks.push(timeBlock);
     // let children = y.children;
     console.log(blocks[i].children[1]);
-    blocks[i].children[1].value = localStorage.getItem(i);
+    blocks[i].children[1].value = localStorage.getItem("hour " + (i + 9));
   }
 }
 
 
 function save() {
   var textContent = this.previousElementSibling.value;
-  var blockElById = this.parentElement.id;
+  var blockElById = "hour " + this.parentElement.id;
   localStorage.setItem(blockElById, textContent);
 }
 
