@@ -6,6 +6,7 @@ body {
 
 textarea {
   background: transparent;
+  /* background-color: rgba(0,0,0, 0.1); */
   border: none;
   resize: none;
   color: #000000;
@@ -32,10 +33,6 @@ textarea {
 .time-block{
   text-align: center;
   border-radius: 15px;
-}
-
-.time-block p {
-  padding-top: 31px;
 }
 
 .row {
